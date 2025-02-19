@@ -10,6 +10,18 @@ const questions = [
     { 
         question: "Which type of workout do you enjoy the most?", 
         options: ["HIIT", "Weight training", "Running", "Yoga"]
+    },
+    { 
+        question: "How many times per week do you plan to exercise?", 
+        options: ["1-2 times", "3-4 times", "5+ times"]
+    },
+    { 
+        question: "Do you prefer indoor or outdoor workouts?", 
+        options: ["Indoor", "Outdoor"]
+    },
+    { 
+        question: "What type of equipment do you like using?", 
+        options: ["Bodyweight only", "Dumbbells & Barbells", "Machines", "Resistance Bands"]
     }
 ];
 

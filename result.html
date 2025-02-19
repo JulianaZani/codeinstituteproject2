@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- meta tags for search engines -->
-    <meta
-      name="description"
-      content="Best workout for you. Workout quiz. Personalized Training"
-    />
-    <meta
-      name="keywords"
-      content="Workout quiz. Quiz. Best workout for me. Exercice quiz. Physical activity quiz. Personalized training"
-    />
+    <meta name="description" content="Best workout for you. Workout quiz. Personalized Training" />
+    <meta name="keywords" content="Workout quiz. Quiz. Best workout for me. Exercice quiz. Physical activity quiz. Personalized training" />
     <title>Quiz - Best Workout for You</title>
     <!-- style -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <!-- favicon -->
-    <link
-      rel="icon"
-      href="assets/favicon/android-chrome-192x192.png"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="assets/favicon/apple-touch-icon.png"
-      type="image/png"
-    />
-    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon/android-chrome-192x192.png" type="image/png"/>
+    <link rel="icon" href="assets/favicon/apple-touch-icon.png" type="image/png"/>
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon"/>
+
   </head>
+
   <body>
-    <header>
-    </header>
-    <script src="script.js"></script>
+
+    <div class="result-container">
+      <h2>Your ideal workout is:</h2>
+      <p id="result"></p>
+      <a href="index.html" class="button">Back to Home</a>
+  </div>
+
+  <script>
+    
+      const answers = JSON.parse(localStorage.getItem("quizAnswers"));
+
+      function determineWorkout(answers) {
+          if (answers.includes("HIIT")) return "HIIT Training - High Intensity!";
+          if (answers.includes("Weight training")) return "Weight Training - Build Strength!";
+          if (answers.includes("Running")) return "Running & Cycling - Improve Endurance!";
+          if (answers.includes("Yoga")) return "Yoga & Pilates - Relax Your Body & Mind!";
+          return "Custom Workout - Contact a trainer!";
+      }
+      document.getElementById("result").innerText = determineWorkout(answers);
+
+  </script>
+
   </body>
+
 </html>

@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- meta tags for search engines -->
-    <meta
-      name="description"
-      content="Best workout for you. Workout quiz. Personalized Training"
-    />
-    <meta
-      name="keywords"
-      content="Workout quiz. Quiz. Best workout for me. Exercice quiz. Physical activity quiz. Personalized training"
-    />
+    <meta name="description" content="Best workout for you. Workout quiz. Personalized Training" />
+    <meta name="keywords" content="Workout quiz. Quiz. Best workout for me. Exercice quiz. Physical activity quiz. Personalized training" />
     <title>Quiz - Best Workout for You</title>
     <!-- style -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <!-- favicon -->
-    <link
-      rel="icon"
-      href="assets/favicon/android-chrome-192x192.png"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="assets/favicon/apple-touch-icon.png"
-      type="image/png"
-    />
-    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon/android-chrome-192x192.png" type="image/png"/>
+    <link rel="icon" href="assets/favicon/apple-touch-icon.png" type="image/png"/>
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon"/>
+
   </head>
+
   <body>
+
     <header>
+
       <h1>Welcome to Personalized Training</h1>
-      <p>Find out which workout is right for you with a quick quiz.</p>
+      <p>Find out which workout is right for you with the quiz below.</p>
+
     </header>
+
     <main>
+
       <h2>Quiz</h2>
+
       <div class="quiz-container">
+
         <h2 id="question"></h2>
         <div id="options"></div>
-        <button id="next">Next</button>
+        <button id="next" style="display:none;" onclick="nextQuestion()">Next</button>
+
       </div>
+
     </main>
+
     <footer>
     </footer>
+
     <script src="script.js"></script>
+
   </body>
+
 </html>

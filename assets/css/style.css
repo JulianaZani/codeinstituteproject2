@@ -20,7 +20,13 @@ body {
 main {
     background-color: aliceblue;
     width: 80%;
+    max-width: 600px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: 10px auto;
     
 }
 
@@ -28,11 +34,13 @@ main {
     padding: 20px;
 }
 
-.paddingbottom5px {
-  padding-bottom: 5px;
+.padding5px {
+  padding: 5px;
 }
 
-.quiz-container {
-   
-
-}
+.quizcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}  

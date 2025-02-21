@@ -14,13 +14,25 @@ html {
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    padding: 2%;
 }
 
 main {
     background-color: aliceblue;
-    border-radius: 10px;
+    width: 80%;
+    border-radius: 30px;
+    
 }
 
 .padding20px {
     padding: 20px;
+}
+
+.paddingbottom5px {
+  padding-bottom: 5px;
+}
+
+.quiz-container {
+   
+
 }

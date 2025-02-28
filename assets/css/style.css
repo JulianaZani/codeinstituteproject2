@@ -1,45 +1,33 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-html {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page body  */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 2%;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2%;
 }
 
 main {
-    background-color: aliceblue;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    margin: 10px auto;
-    
-}
-
-.bluecolor {
-  color: #0c3865;
-}
-
-.padding20px {
-    padding: 20px;
-}
-
-.padding5px {
-  padding: 5px;
+  background-color: aliceblue;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin: 10px auto;
 }
 
 .quizcontainer {
@@ -47,15 +35,15 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}  
+}
 
 #options {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   gap: 10px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin-top: 4px;
-} 
+}
 
 .button {
   padding: 10px 20px;
@@ -66,7 +54,7 @@ main {
   cursor: pointer;
   text-align: center;
   font-size: 16px;
-  min-width: 120px; 
+  min-width: 120px;
   margin-top: 10px;
 }
 
@@ -74,11 +62,24 @@ main {
   background-color: #5a8cc1;
 }
 
+/* General formatting */
+.bluecolor {
+  color: #0c3865;
+}
+
+.padding20px {
+  padding: 20px;
+}
+
+.padding5px {
+  padding: 5px;
+}
+
 /* Result page */
 .result-container {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   text-align: center;
   background-color: aliceblue;
@@ -86,7 +87,7 @@ main {
   max-width: 600px;
   padding: 20px;
   border-radius: 15px;
-  margin: 20px auto; 
+  margin: 20px auto;
 }
 
 #result {

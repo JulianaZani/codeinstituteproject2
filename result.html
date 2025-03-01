@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
   <head>
-
-    <meta charset="UTF-8" 
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" 
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- meta tags for search engines -->
     <meta
       name="description"
@@ -19,8 +15,7 @@
     />
     <title>Quiz - Best Workout for You</title>
     <!-- style -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" 
-    />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <!-- favicon -->
     <link
       rel="icon"
@@ -32,37 +27,42 @@
       href="assets/favicon/apple-touch-icon.png"
       type="image/png"
     />
-    <link 
-      rel="icon" 
-      href="assets/favicon/favicon.ico" 
-      type="image/x-icon" 
-    />
-
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-
     <div class="result-container">
-      <h2>Your ideal workout is:</h2>
+      <h2>Your ideal workout:</h2>
       <p id="result" class="padding20px"></p>
       <a href="index.html" class="button">Back to Home</a>
     </div>
 
     <script>
-    
       const answers = JSON.parse(localStorage.getItem("quizAnswers"));
 
       function determineWorkout(answers) {
-          if (answers.includes("HIIT")) return "HIIT Training - High Intensity!";
-          if (answers.includes("Weight training")) return "Weight Training - Build Strength!";
-          if (answers.includes("Running")) return "Running & Cycling - Improve Endurance!";
-          if (answers.includes("Yoga")) return "Yoga & Pilates - Relax Your Body & Mind!";
+        let workouts = [];
+
+        if (answers.includes("Gain muscle"))
+          workouts.push("Weight Training - Build Strength!");
+
+        if (answers.includes("HIIT"))
+          workouts.push("HIIT Training - High Intensity!");
+        if (answers.includes("Weight training"))
+          workouts.push("Weight Training - Build Strength!");
+        if (answers.includes("Running"))
+          workouts.push("Running & Cycling - Improve Endurance!");
+        if (answers.includes("Yoga"))
+          workouts.push("Yoga & Pilates - Relax Your Body & Mind!");
+
+        if (workouts.length === 0) {
           return "Custom Workout - Contact a trainer!";
+        }
+
+        return workouts.join(" & ");
       }
+
       document.getElementById("result").innerText = determineWorkout(answers);
-
     </script>
-
   </body>
-
 </html>

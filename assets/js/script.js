@@ -58,3 +58,29 @@ function selectAnswer(answer) {
 }
 
 showQuestion();
+
+const quizanswers = JSON.parse(localStorage.getItem("quizAnswers"));
+
+      function determineWorkout(quizanswers) {
+        let workouts = [];
+
+        if (answers.includes("Gain muscle"))
+          workouts.push("Weight Training - Build Strength!");
+
+        if (answers.includes("HIIT"))
+          workouts.push("HIIT Training - High Intensity!");
+        if (answers.includes("Weight training"))
+          workouts.push("Weight Training - Build Strength!");
+        if (answers.includes("Running"))
+          workouts.push("Running & Cycling - Improve Endurance!");
+        if (answers.includes("Yoga"))
+          workouts.push("Yoga & Pilates - Relax Your Body & Mind!");
+
+        if (workouts.length === 0) {
+          return "Custom Workout - Contact a trainer!";
+        }
+
+        return workouts.join(" & ");
+      }
+
+      document.getElementById("result").innerText = determineWorkout(answers);

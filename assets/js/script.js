@@ -33,7 +33,7 @@ function showQuestion() {
     document.getElementById("question").innerText = currentQuestion.question;
     
     const optionsContainer = document.getElementById("options");
-    optionsContainer.innerHTML = ""; // Clear previous options
+    optionsContainer.innerHTML = "";
 
     currentQuestion.options.forEach(option => {
         let button = document.createElement("button");
@@ -60,22 +60,28 @@ function showResult() {
   let workouts = [];
 
   if (answers.includes("Gain muscle"))
-      workouts.push("Weight Training - Build Strength!");
+      workouts.push("Calisthenics and bodybuilding");
+  if (answers.includes("Relaxation"))
+      workouts.push("Stretching exercises");
+  if (answers.includes("Improve endurance"))
+    workouts.push("Exercises that improve cardiovascular endurance: HIIT, Dancing");
+  if (answers.includes("Lose weight"))
+    workouts.push("For weight loss, in addition to a good diet, it is important to combine cardio with weight training, exemplo: Functional training");  
 
   if (answers.includes("HIIT"))
       workouts.push("HIIT Training - High Intensity!");
   if (answers.includes("Weight training"))
-      workouts.push("Weight Training - Build Strength!");
+      workouts.push("Weight Training to Build Strength!");
   if (answers.includes("Running"))
-      workouts.push("Running & Cycling - Improve Endurance!");
+      workouts.push("Running and Cycling - Improve Endurance!");
   if (answers.includes("Yoga"))
-      workouts.push("Yoga & Pilates - Relax Your Body & Mind!");
+      workouts.push("Yoga and Pilates - Relax Your Body & Mind!");
 
   if (workouts.length === 0) {
       workouts.push("Custom Workout - Contact a trainer!");
   }
 
-  document.getElementById("result").innerText = workouts.join(" & ");
+  document.getElementById("result").innerText = workouts.join(" . ");
   
   document.querySelector(".quizcontainer").style.display = "none";
   document.querySelector(".result-container").style.display = "flex";

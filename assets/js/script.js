@@ -60,7 +60,7 @@ function showResult() {
   let workouts = [];
 
   if (answers.includes("Gain muscle"))
-      workouts.push("Calisthenics and bodybuilding");
+      workouts.push("For muscle gain: Calisthenics and bodybuilding");
   if (answers.includes("Relaxation"))
       workouts.push("Stretching exercises");
   if (answers.includes("Improve endurance"))
@@ -69,17 +69,13 @@ function showResult() {
     workouts.push("For weight loss, in addition to a good diet, it is important to combine cardio with weight training, exemplo: Functional training");  
 
   if (answers.includes("HIIT"))
-      workouts.push("HIIT Training - High Intensity!");
+      workouts.push("HIIT training for high intensity activity!");
   if (answers.includes("Weight training"))
       workouts.push("Weight Training to Build Strength!");
   if (answers.includes("Running"))
-      workouts.push("Running and Cycling - Improve Endurance!");
+      workouts.push("Running and Cycling to improve Endurance!");
   if (answers.includes("Yoga"))
-      workouts.push("Yoga and Pilates - Relax Your Body & Mind!");
-
-  if (workouts.length === 0) {
-      workouts.push("Custom Workout - Contact a trainer!");
-  }
+      workouts.push("Yoga and Pilates to relax your body and mind!");
 
   document.getElementById("result").innerText = workouts.join(" . ");
   

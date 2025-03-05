@@ -50,37 +50,35 @@ function selectAnswer(answer) {
     if (currentIndex + 1 < questions.length) {
         currentIndex++;
         showQuestion();
-    } else {
-        // Save to localStorage and redirect to results page
-        localStorage.setItem("quizAnswers", JSON.stringify(answers));
-        window.location.href = "result.html";
+      } else {
+        showResult();
     }
+
+}
+
+function showResult() {
+  let workouts = [];
+
+  if (answers.includes("Gain muscle"))
+      workouts.push("Weight Training - Build Strength!");
+
+  if (answers.includes("HIIT"))
+      workouts.push("HIIT Training - High Intensity!");
+  if (answers.includes("Weight training"))
+      workouts.push("Weight Training - Build Strength!");
+  if (answers.includes("Running"))
+      workouts.push("Running & Cycling - Improve Endurance!");
+  if (answers.includes("Yoga"))
+      workouts.push("Yoga & Pilates - Relax Your Body & Mind!");
+
+  if (workouts.length === 0) {
+      workouts.push("Custom Workout - Contact a trainer!");
+  }
+
+  document.getElementById("result").innerText = workouts.join(" & ");
+  
+  document.querySelector(".quizcontainer").style.display = "none";
+  document.querySelector(".result-container").style.display = "flex";
 }
 
 showQuestion();
-
-const quizanswers = JSON.parse(localStorage.getItem("quizAnswers"));
-
-      function determineWorkout(quizanswers) {
-        let workouts = [];
-
-        if (answers.includes("Gain muscle"))
-          workouts.push("Weight Training - Build Strength!");
-
-        if (answers.includes("HIIT"))
-          workouts.push("HIIT Training - High Intensity!");
-        if (answers.includes("Weight training"))
-          workouts.push("Weight Training - Build Strength!");
-        if (answers.includes("Running"))
-          workouts.push("Running & Cycling - Improve Endurance!");
-        if (answers.includes("Yoga"))
-          workouts.push("Yoga & Pilates - Relax Your Body & Mind!");
-
-        if (workouts.length === 0) {
-          return "Custom Workout - Contact a trainer!";
-        }
-
-        return workouts.join(" & ");
-      }
-
-      document.getElementById("result").innerText = determineWorkout(answers);

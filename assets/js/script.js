@@ -1,3 +1,4 @@
+// Quiz questions and answers options
 const questions = [
     { 
         question: "Do you prefer individual or group workouts?", 
@@ -59,6 +60,7 @@ function selectAnswer(answer) {
 
 }
 
+// Quiz result
 function showResult() {
   let workouts = [];
 

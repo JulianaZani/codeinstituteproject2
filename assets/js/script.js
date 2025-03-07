@@ -29,6 +29,7 @@ const questions = [
 let answers = [];
 let currentIndex = 0;
 
+// Displays the current question on the screen
 function showQuestion() {
     const currentQuestion = questions[currentIndex];
     console.log("Current question:", currentQuestion.question);
@@ -37,6 +38,7 @@ function showQuestion() {
     const optionsContainer = document.getElementById("options");
     optionsContainer.innerHTML = "";
 
+    // Creates buttons for each answer option
     currentQuestion.options.forEach(option => {
         let button = document.createElement("button");
         button.innerText = option;
@@ -46,6 +48,7 @@ function showQuestion() {
     });
 }
 
+// Function triggered when the user selects an answer
 function selectAnswer(answer) {
     answers.push(answer);
     console.log("Selected answer:", answer);

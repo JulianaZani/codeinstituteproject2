@@ -60,10 +60,11 @@ function selectAnswer(answer) {
 
 }
 
-// Quiz result
+// Displays the quiz results based on the user's answers
 function showResult() {
   let workouts = [];
 
+  // Determines recommended workouts based on user responses
   if (answers.includes("Gain muscle"))
       workouts.push("For muscle gain: Calisthenics and bodybuilding");
   if (answers.includes("Relaxation"))
@@ -84,8 +85,10 @@ function showResult() {
 
   console.log("Final selected workouts:", workouts);
 
+  // Displays the recommended workouts in the HTML
   document.getElementById("result").innerText = workouts.join(" . ");
   
+  // Hides the quiz and displays the result
   document.querySelector(".quizcontainer").style.display = "none";
   document.querySelector(".result-container").style.display = "flex";
 }

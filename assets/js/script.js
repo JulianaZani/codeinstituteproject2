@@ -30,6 +30,7 @@ let currentIndex = 0;
 
 function showQuestion() {
     const currentQuestion = questions[currentIndex];
+    console.log("Current question:", currentQuestion.question);
     document.getElementById("question").innerText = currentQuestion.question;
     
     const optionsContainer = document.getElementById("options");
@@ -46,6 +47,8 @@ function showQuestion() {
 
 function selectAnswer(answer) {
     answers.push(answer);
+    console.log("Selected answer:", answer);
+    console.log("Current answers array:", answers);
     
     if (currentIndex + 1 < questions.length) {
         currentIndex++;
@@ -76,6 +79,8 @@ function showResult() {
       workouts.push("Running and Cycling to improve Endurance!");
   if (answers.includes("Yoga"))
       workouts.push("Yoga and Pilates to relax your body and mind!");
+
+  console.log("Final selected workouts:", workouts);
 
   document.getElementById("result").innerText = workouts.join(" . ");
   

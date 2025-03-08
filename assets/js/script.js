@@ -63,6 +63,11 @@ function selectAnswer(answer) {
 
 }
 
+// Hide the result on startup
+window.onload = function() {
+    document.querySelector(".result-container").style.display = "none";
+};
+
 // Displays the quiz results based on the user's answers
 function showResult() {
   let workouts = [];

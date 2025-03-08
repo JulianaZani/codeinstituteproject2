@@ -20,7 +20,6 @@ body {
 
 #quizbox {
   background-color: aliceblue;
-  width: 80%;
   max-width: 600px;
   border-radius: 30px;
   display: flex;

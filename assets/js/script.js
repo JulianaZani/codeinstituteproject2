@@ -28,6 +28,14 @@ const questions = [
 
 let answers = [], currentIndex = 0;
 
+// Back button
+const backButton = document.getElementById("back-button");
+
+backButton.style.display = "none";
+
+// Add event listener to the back button
+backButton.addEventListener("click", goBack);
+
 // Display the current question
 function showQuestion() {
     const currentQuestion = questions[currentIndex];
@@ -45,6 +53,9 @@ function showQuestion() {
         button.onclick = () => selectAnswer(option);
         optionsContainer.appendChild(button);
     });
+
+    // Show/hide back button based on question index
+    backButton.style.display = currentIndex > 0 ? "block" : "none";
 }
 
 // Store the user's answer and move to the next question

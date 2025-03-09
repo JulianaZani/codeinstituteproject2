@@ -33,15 +33,15 @@ let currentIndex = 0;
 const backButton = document.getElementById("backBtn");
 
 backButton.style.display = "none";
-backButton.style.backgroundColor = "orange";
-backButton.style.color = "#0c3865";
+backButton.style.backgroundColor = "#030200";
+backButton.style.color = "#f7f6eb";
 backButton.style.padding = "8px 15px";
 backButton.style.borderRadius = "5px";
 backButton.style.border = "none"; 
 backButton.style.cursor = "pointer";
 backButton.style.marginTop = "10px";
-backButton.onmouseover = () => backButton.style.backgroundColor = "darkorange";
-backButton.onmouseout = () => backButton.style.backgroundColor = "orange";
+backButton.onmouseover = () => backButton.style.backgroundColor = "#264a91";
+backButton.onmouseout = () => backButton.style.backgroundColor = "#030200";
 
 // Add event listener to the back button
 backButton.addEventListener("click", goBack);
@@ -62,7 +62,7 @@ function showQuestion() {
 
         button.style.padding = "10px 20px";
         button.style.backgroundColor = "#0c3865";
-        button.style.color = "white";
+        button.style.color = "#f7f6eb";
         button.style.border = "1px solid #ccc";
         button.style.borderRadius = "5px";
         button.style.cursor = "pointer";
@@ -140,15 +140,17 @@ function showResult() {
 
     // Style the "Back to Home" link as a button
     const backToHomeLink = document.querySelector(".button");
-    backToHomeLink.style.backgroundColor = "#f9a826";
+    backToHomeLink.style.backgroundColor = "#0c3865";
     backToHomeLink.style.textDecoration = "none";
-    backToHomeLink.style.color = "#0c3865";
+    backToHomeLink.style.color = "#f7f6eb";
     backToHomeLink.style.padding = "8px 15px";
     backToHomeLink.style.border = "1px solid #ccc"; 
     backToHomeLink.style.borderRadius = "5px";
     backToHomeLink.style.cursor = "pointer";
     backToHomeLink.style.display = "inline-block";
     backToHomeLink.style.marginTop = "10px";
+    backToHomeLink.onmouseover = () => backToHomeLink.style.backgroundColor = "#264a91";
+    backToHomeLink.onmouseout = () => backToHomeLink.style.backgroundColor = "#0c3865";
 }
 
 // Adjust quiz box width based on screen size

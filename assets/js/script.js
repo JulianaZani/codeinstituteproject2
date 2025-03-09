@@ -33,6 +33,13 @@ let currentIndex = 0;
 const backButton = document.getElementById("back-button");
 
 backButton.style.display = "none";
+backButton.style.backgroundColor = "orange";
+backButton.style.color = "white";
+backButton.style.padding = "8px 15px";
+backButton.style.borderRadius = "5px";
+backButton.style.border = "none"; 
+backButton.style.cursor = "pointer";
+backButton.style.marginTop = "10px";
 
 // Add event listener to the back button
 backButton.addEventListener("click", goBack);

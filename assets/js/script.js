@@ -61,8 +61,8 @@ function showQuestion() {
         button.innerText = option;
 
         button.style.padding = "10px 20px";
-        button.style.backgroundColor = "#f0f0f0";
-        button.style.color = "black";
+        button.style.backgroundColor = "#0c3865";
+        button.style.color = "white";
         button.style.border = "1px solid #ccc";
         button.style.borderRadius = "5px";
         button.style.cursor = "pointer";
@@ -71,8 +71,8 @@ function showQuestion() {
         button.style.transition = "background-color 0.3s ease";
 
         // Hover Effect
-        button.onmouseover = () => button.style.backgroundColor = "#ddd";
-        button.onmouseout = () => button.style.backgroundColor = "#f0f0f0";
+        button.onmouseover = () => button.style.backgroundColor = "#395db8";
+        button.onmouseout = () => button.style.backgroundColor = "#0c3865";
 
         if (answers[currentIndex] === option) {
             button.style.backgroundColor = "#5a8cc1";

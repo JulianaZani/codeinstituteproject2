@@ -74,7 +74,6 @@ function showQuestion() {
         button.onmouseover = () => button.style.backgroundColor = "#ddd";
         button.onmouseout = () => button.style.backgroundColor = "#f0f0f0";
 
-        // Se o botão já estiver selecionado
         if (answers[currentIndex] === option) {
             button.style.backgroundColor = "#5a8cc1";
             button.style.color = "white";

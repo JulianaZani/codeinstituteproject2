@@ -30,7 +30,7 @@ let answers = new Array(questions.length).fill(null);
 let currentIndex = 0;
 
 // Back button
-const backButton = document.getElementById("back-button");
+const backButton = document.getElementById("backBtn");
 
 backButton.style.display = "none";
 backButton.style.backgroundColor = "orange";
@@ -40,6 +40,8 @@ backButton.style.borderRadius = "5px";
 backButton.style.border = "none"; 
 backButton.style.cursor = "pointer";
 backButton.style.marginTop = "10px";
+backButton.onmouseover = () => backButton.style.backgroundColor = "darkorange";
+backButton.onmouseout = () => backButton.style.backgroundColor = "orange";
 
 // Add event listener to the back button
 backButton.addEventListener("click", goBack);
@@ -57,10 +59,25 @@ function showQuestion() {
     currentQuestion.options.forEach(option => {
         const button = document.createElement("button");
         button.innerText = option;
-        button.classList.add("button");
 
+        button.style.padding = "10px 20px";
+        button.style.backgroundColor = "#f0f0f0";
+        button.style.color = "black";
+        button.style.border = "1px solid #ccc";
+        button.style.borderRadius = "5px";
+        button.style.cursor = "pointer";
+        button.style.fontSize = "16px";
+        button.style.marginTop = "10px";
+        button.style.transition = "background-color 0.3s ease";
+
+        // Hover Effect
+        button.onmouseover = () => button.style.backgroundColor = "#ddd";
+        button.onmouseout = () => button.style.backgroundColor = "#f0f0f0";
+
+        // Se o botão já estiver selecionado
         if (answers[currentIndex] === option) {
             button.style.backgroundColor = "#5a8cc1";
+            button.style.color = "white";
         }
 
         button.onclick = () => selectAnswer(option);

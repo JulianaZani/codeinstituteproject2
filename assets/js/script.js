@@ -34,7 +34,7 @@ const backButton = document.getElementById("backBtn");
 
 backButton.style.display = "none";
 backButton.style.backgroundColor = "orange";
-backButton.style.color = "white";
+backButton.style.color = "#0c3865";
 backButton.style.padding = "8px 15px";
 backButton.style.borderRadius = "5px";
 backButton.style.border = "none"; 
@@ -137,6 +137,18 @@ function showResult() {
     document.querySelector(".quizcontainer").style.display = "none";
     backButton.style.display = "none";
     document.querySelector(".result-container").style.display = "flex";
+
+    // Style the "Back to Home" link as a button
+    const backToHomeLink = document.querySelector(".button");
+    backToHomeLink.style.backgroundColor = "#f9a826";
+    backToHomeLink.style.textDecoration = "none";
+    backToHomeLink.style.color = "#0c3865";
+    backToHomeLink.style.padding = "8px 15px";
+    backToHomeLink.style.border = "1px solid #ccc"; 
+    backToHomeLink.style.borderRadius = "5px";
+    backToHomeLink.style.cursor = "pointer";
+    backToHomeLink.style.display = "inline-block";
+    backToHomeLink.style.marginTop = "10px";
 }
 
 // Adjust quiz box width based on screen size

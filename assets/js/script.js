@@ -72,6 +72,14 @@ function selectAnswer(answer) {
     }
 }
 
+// Function to go back to the previous question
+function goBack() {
+    if (currentIndex > 0) {
+        currentIndex--; // Move back one question
+        showQuestion();
+    }
+}
+
 // Display the final result with workout recommendations
 function showResult() {
     let workouts = [];
@@ -98,6 +106,7 @@ function showResult() {
 
     document.getElementById("result").innerText = workouts.join(" . ");
     document.querySelector(".quizcontainer").style.display = "none";
+    backButton.style.display = "none";
     document.querySelector(".result-container").style.display = "flex";
 }
 

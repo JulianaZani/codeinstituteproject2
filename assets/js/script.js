@@ -26,7 +26,8 @@ const questions = [
     }
 ];
 
-let answers = [], currentIndex = 0;
+let answers = new Array(questions.length).fill(null);
+let currentIndex = 0;
 
 // Back button
 const backButton = document.getElementById("back-button");
@@ -50,6 +51,11 @@ function showQuestion() {
         const button = document.createElement("button");
         button.innerText = option;
         button.classList.add("button");
+
+        if (answers[currentIndex] === option) {
+            button.style.backgroundColor = "#5a8cc1";
+        }
+
         button.onclick = () => selectAnswer(option);
         optionsContainer.appendChild(button);
     });
@@ -60,7 +66,7 @@ function showQuestion() {
 
 // Store the user's answer and move to the next question
 function selectAnswer(answer) {
-    answers.push(answer);
+    answers[currentIndex] = answer;
     console.log("Selected Answer:", answer); 
     console.log("Current Answers Array:", answers); 
     
@@ -75,7 +81,7 @@ function selectAnswer(answer) {
 // Function to go back to the previous question
 function goBack() {
     if (currentIndex > 0) {
-        currentIndex--; // Move back one question
+        currentIndex--;
         showQuestion();
     }
 }

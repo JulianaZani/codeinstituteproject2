@@ -141,7 +141,10 @@ function showResult() {
 
   console.log("Final Selected Workouts:", workouts);
 
-  document.getElementById("result").innerText = workouts.join(" . ");
+  const resultElement = document.getElementById("result");
+  resultElement.innerHTML = workouts.join(" . ") + "<br><br>" +
+    "<strong>📞 Contact our personal trainer: </strong> +353 083 0000 (Maria McDonalds)";
+    
   document.querySelector(".quizcontainer").style.display = "none";
   backButton.style.display = "none";
   document.querySelector(".result-container").style.display = "flex";

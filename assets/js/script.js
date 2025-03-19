@@ -143,7 +143,7 @@ function showResult() {
 
   const resultElement = document.getElementById("result");
   resultElement.innerHTML = workouts.join(" . ") + "<br><br>" +
-    "<strong>📞 Contact our personal trainer: </strong> +353 083 0000 (Maria McDonalds)";
+    "<strong>📞 Contact me: </strong> +353 083 0000 (Maria Personal Trainer)";
     
   document.querySelector(".quizcontainer").style.display = "none";
   backButton.style.display = "none";
